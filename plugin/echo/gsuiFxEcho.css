@@ -1,0 +1,113 @@
+:root {
+	--gsuiFxEcho-bg: #666;
+}
+
+.gsuiFxEcho {
+    display: grid;
+    grid-gap: 8px;
+	background-color: var( --gsuiFxEcho-bg );
+    padding: 18px;
+    --gsuiSlider-lineColor: #a14040;
+    --gsuiSlider-lineBgColor: rgba( 0, 0, 0, .5 );
+}
+
+.gsuiFxEcho .gsuiDotline {
+    background-color: #333;
+}
+.gsuiFxEcho .gsuiDotline::after,
+.gsuiFxEcho .gsuiDotline::before {
+    content: 'L';
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 100px;
+    color: #fff;
+    font-size: 84px;
+    opacity: .07;
+    pointer-events: none;
+}
+.gsuiFxEcho .gsuiDotline::before {
+    content: 'R';
+    border: 0;
+    border-bottom: 1px solid;
+    border-style: dashed;
+    box-sizing: border-box;
+}
+
+.gsuiFxEcho-title {
+    margin-top: 0;
+    margin-bottom: .2em;
+    font-size: 2.3rem;
+}
+
+.gsuiFxEcho-configWrap,
+.gsuiFxEcho-lowpassWrap,
+.gsuiFxEcho-highpassWrap,
+.gsuiFxEcho-gainWrap {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 18px;
+    text-align: center;
+}
+
+.gsuiFxEcho-echoTitle {
+    margin: 0;
+    text-align: center;
+}
+.gsuiFxEcho-echoSliders {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.gsuiFxEcho-configWrap .gsuiSlider,
+.gsuiFxEcho-echoSliders .gsuiSlider {
+    margin-bottom: 6px;
+}
+
+.gsuiFxEcho-echoSliders {
+    display: grid;
+    padding: 12px;
+    background-color: #404040;
+    grid-gap: 18px;
+    border-radius: 3px;
+}
+
+.gsuiFxEcho-beatsWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.gsuiFxEcho-beatsWrap::before,
+.gsuiFxEcho-beatsWrap::after {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f060";
+    flex: 1;
+    font-weight: 900;
+}
+.gsuiFxEcho-beatsWrap::after {
+    content: "\f061";
+}
+.gsuiFxEcho-beatsWrap::after {
+    text-align: right;
+}
+
+.gsuiFxEcho-beats {
+    box-sizing: border-box;
+    border: 0;
+    width: 80px;
+    padding: 4px;
+    margin-right: 6px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba( 0, 0, 0, .5 );
+}
+
+.gsuiSlider {
+    height: 50px !important;
+}
+
+.gsuiFxEcho-dotsLinkLabel {
+    display: flex;
+    align-items: center;
+}

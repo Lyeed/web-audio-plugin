@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plugin Echo</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="plugin/echo/gsuiFxEcho.css" />
+    <link rel="stylesheet" href="gs-ui-components/gsuiDotline/gsuiDotline.css" />
+    <link rel="stylesheet" href="gs-ui-components/gsuiSlider/gsuiSlider.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f32f65d257.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="gsuiSamples-wrapper">
+            <h3>SAMPLES</h3>
+        	<div id="bufferBtns">
+        		<button class="btnAsset" data-name="56k.ogg">56k</button>
+                <button class="btnAsset" data-name="whistle.ogg">Whistle</button>
+                <button class="btnAsset" data-name="maroon.ogg">Maroon5</button>
+                <button class="btnAsset" data-name="bip.ogg">Bip</button>
+                <button class="btnAsset" data-name="cold.ogg">Cold</button>
+                <button class="btnAsset" data-name="punch.ogg">Punch</button>
+        		<button class="btnAsset" id="btnStop">stop</button>
+        	</div>
+        </div>
+    	<div id="canvases">
+            <h3>SPECTRUMS</h3>
+    		<div id="spectrums">
+    			<canvas id="spectrumIn"></canvas>
+    			<canvas id="spectrumOut"></canvas>
+    		</div>
+            <h3>ANALYSERS</h3>
+    		<div id="analysers">
+                <span class="analyserDesc">Original</span>
+    			<canvas id="analyserIn"></canvas>
+    			<canvas id="analyserOut"></canvas>
+                <span class="analyserDesc">Modified</span>
+    		</div>
+    	</div>
+    	<div id="pluginArea">
+            <h1 class="gsuiFxEcho-title">PLUGIN: ECHO</h1>
+    		<div id="pluginWrap"></div>
+    	</div>
+    </div>
+    <div id="gsuiSlider-template" class="gsuiSlider">
+        <input type="range"/>
+        <div class="gsui-line">
+            <div class="gsui-lineColor"></div>
+        </div>
+        <svg>
+            <circle class="gsui-svgLine"/>
+            <circle class="gsui-svgLineColor"/>
+        </svg>
+        <div class="gsui-eventCatcher"></div>
+    </div>
+    <script>function lg( a ) { return console.log.apply( console, arguments ), a; }</script>
+    <script type="module" src="utils/objectDeepAssign.js"></script>
+    <script src="gs-ui-components/gsuiAnalyser/gsuiAnalyser.js"></script>
+    <script src="gs-ui-components/gsuiDotline/gsuiDotline.js"></script>
+    <script src="gs-ui-components/gsuiSpectrum/gsuiSpectrum.js"></script>
+    <script src="gs-ui-components/gsuiSpectrum/gsuiSpectrum.draw.js"></script>
+    <script src="gs-ui-components/gsuiBeatlines/gsuiBeatlines.js"></script>
+    <script src="gs-ui-components/gsuiSlider/gsuiSlider.js"></script>
+    <script src="plugin/echo/gswaFxEcho.js"></script>
+    <script type="module" src="run.js"></script>
+</body>
+</html>

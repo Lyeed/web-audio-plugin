@@ -1,0 +1,140 @@
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	color: #ddd;
+	background-color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* .......................................................................... */
+#main {
+	height: 100%;
+	display: grid;
+    grid-auto-flow: column;
+	justify-content: center;
+    align-items: center;
+    grid-gap: 64px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+#gsuiSamples-wrapper,
+#bufferBtns,
+#canvases,
+#pluginArea {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#pluginArea {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#gsuiSamples-wrapper {
+    flex-direction: column;
+}
+
+#gsuiSamples-wrapper > h3 {
+    margin-top: 0;
+    margin-bottom: .2em;
+    font-size: 1.8rem;
+}
+
+/* .......................................................................... */
+#bufferBtns {
+    display: grid;
+    grid-gap: 1em;
+    border-radius: 2px;
+    box-shadow: 0 0 0 4px rgba( 0, 0, 0, .25 );
+    padding: 18px;
+    background-color: #3f3f3f;
+}
+.btnAsset {
+    all: unset;
+    font-size: 22px;
+    cursor: pointer;
+    color: #ddd;
+    text-align: center;
+    padding: 2px 8px;
+    background-color: black;
+    border-radius: 3px;
+}
+#btnStop {
+    background-color: #760a0a;
+}
+
+/* .......................................................................... */
+#canvases {
+	flex-direction: column;
+}
+#spectrums {
+	display: flex;
+	flex-direction: column;
+}
+#analysers {
+	display: flex;
+}
+#canvases canvas {
+	background-color: #000;
+}
+#canvases h3 {
+    font-size: 42px;
+    margin-bottom: 4px;
+    color: #ddd;
+}
+#spectrums canvas {
+	width: 300px;
+	height: 64px;
+	margin-bottom: 2px;
+}
+#analysers canvas {
+	width: 96px;
+	height: 300px;
+}
+#analyserIn {
+	margin-right: 2px;
+}
+
+/* .......................................................................... */
+#pluginArea {
+}
+#pluginWrap {
+	/*resize: both;*/
+	overflow: hidden;
+	border-radius: 2px;
+	box-shadow: 0 0 0 4px rgba( 0, 0, 0, .25 );
+    width: 600px;
+    max-width: 600px;
+}
+
+/* .......................................................................... */
+.gsuiDotline {
+    background-color: black;
+    min-height: 200px;
+    box-sizing: border-box;
+    min-width: 300px;
+}
+.gsuiDotline-dot {
+    color: white;
+    cursor: pointer;
+}
+.gsuiDotline polyline {
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+/* .......................................................................... */
+.analyserDesc {
+    writing-mode: vertical-lr;
+    font-size: 36px;
+    margin-top: 12px;
+    opacity: 0.6;
+}
+
+.hidden {
+    visibility: hidden;
+}
